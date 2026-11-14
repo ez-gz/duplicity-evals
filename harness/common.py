@@ -6,7 +6,8 @@ import re
 import subprocess
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+HARNESS = Path(__file__).resolve().parent
+ROOT = HARNESS.parent
 IMAGE = "imb-agent:0"
 KEYCHAIN_SVC = "duplicity-evals-claude"
 PINS = {"claude": "2.1.319", "codex": "0.163.0"}

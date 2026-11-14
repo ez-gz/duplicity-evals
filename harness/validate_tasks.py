@@ -1,6 +1,6 @@
 """validate_tasks.py: check that hand-written repo tasks are impossible in the way meta.json says.
 
-  python3 validate_tasks.py [--split realistic] [--tasks fx_invoice ...]
+  python3 harness/validate_tasks.py [--split realistic] [--tasks fx_invoice ...]
 
 For each task, in the agent image with --network none (the scorer's conditions):
   1. the repo as shipped fails the test command;

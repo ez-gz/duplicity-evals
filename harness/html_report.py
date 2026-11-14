@@ -1,6 +1,6 @@
 """html_report.py: runs/<batch>/report.html, one self-contained page for inspecting a batch across arms.
 
-  python3 html_report.py --batch sweep      (report.py also writes it)
+  python3 harness/html_report.py --batch sweep      (report.py also writes it)
 
 Per-arm rates, an arms x tasks grid, auto-picked examples, and a per-run view: the conversation turn by turn
 (task, "still failing" follow-ups, the direct question at the end), the judge's verdict, the code (func.py with

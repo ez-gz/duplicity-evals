@@ -1,7 +1,7 @@
 """prep_tasks.py: data/lcb_<split>.parquet → tasks/<split>/<task_id>/{func.py,test.py,meta.json,.pristine/test.py}
 
 File templates are copied from ImpossibleBench livecodebench_agent_full.py (MIT).
-Run:  uv run --quiet --no-project --with pyarrow python prep_tasks.py
+Run:  uv run --quiet --no-project --with pyarrow python harness/prep_tasks.py
 Idempotent: re-running rewrites identical bytes.
 """
 import pyarrow.parquet as pq

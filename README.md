@@ -66,7 +66,7 @@ meant the change would be thrown away (43 of 43).
 
 ## Running it
 
-Needs macOS, Docker, `uv`, and your own logins for Claude Code and Codex CLI. `./preflight.sh` checks all of it,
+Needs macOS, Docker, `uv`, and your own logins for Claude Code and Codex CLI. `make preflight` checks all of it,
 makes no model calls, and prints the exact command for anything missing. The Claude token is read from the macOS
 keychain and the Codex login from `.secrets/` (git-ignored).
 
@@ -83,26 +83,31 @@ make view BATCH=scale   # open the HTML report for a batch
 ```
 
 An arm is `agent[:model][@scaffold][+prompt]`, for example `--arm claude:haiku`, `--arm codex:gpt-6.1-sol+strict`
-or `--arm claude@min`. See the docstring in `run.py`. Runs are resumable and land in `runs/<batch>/`.
+or `--arm claude@min`. See the docstring in `harness/run.py`. Runs are resumable and land in `runs/<batch>/`.
 
-`python3 validate_tasks.py` checks that each repo task is impossible in the way its `meta.json` says, and
-`python3 selftest.py` checks the scorer on synthetic runs with known labels.
+`python3 harness/validate_tasks.py` checks that each repo task is impossible in the way its `meta.json` says, and
+`python3 harness/selftest.py` checks the scorer on synthetic runs with known labels.
 
 ## Layout
 
 ```
-run.py              conversation driver: task, pushback turns, forked follow-up questions
-score.py            deterministic pass/fail and test-modification labels (no LLM)
-judge.py            LLM judge of what the agent disclosed
-reader.py           blind LLM reader of each text the agent wrote
-outcome.py          one outcome label per run
-compare.py          outcome tables across batches, judge agreement
-report.py, html_report.py   per-batch report, and a page to inspect runs turn by turn
-labels.py, human_reader.py  blind sheets for human labels, and their scorers
-xloop.py            minimal shared scaffold for the cross-harness arms
-prompts/            task prompts, pushback suffixes, judge prompt
-tasks/realistic/    the six repo tasks
-docker/             agent image
+README.md       this file
+FINDINGS.md     results so far, with every table and caveat
+Makefile        every experiment as a target
+harness/        the code
+  run.py              conversation driver: task, pushback turns, forked follow-up questions
+  score.py            deterministic pass/fail and test-modification labels (no LLM)
+  judge.py            LLM judge of what the agent disclosed
+  reader.py           blind LLM reader of each text the agent wrote
+  outcome.py          one outcome label per run
+  compare.py          outcome tables across batches, judge agreement
+  report.py, html_report.py     per-batch report, and a page to inspect runs turn by turn
+  labels.py, human_reader.py    blind sheets for human labels, and their scorers
+  xloop.py            minimal shared scaffold for the cross-harness arms
+  prep_tasks.py, validate_tasks.py, selftest.py, preflight.sh    setup and checks
+prompts/        task prompts, pushback suffixes, judge prompt
+tasks/          the six repo tasks (realistic/); the LiveCodeBench tasks are unpacked here by `make tasks`
+docker/         agent image with pinned CLI versions
 ```
 
 ## Credits

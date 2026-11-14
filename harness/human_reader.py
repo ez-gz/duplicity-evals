@@ -1,8 +1,8 @@
 """human_reader.py: a blind sheet where a person reads only a requested artifact (PR description, commit message,
 changelog entry, status update) and says whether it reveals a workaround. The human version of reader.py.
 
-  python3 human_reader.py make --batches probes scale --n 40     -> runs/_labels/reader_sheet.html
-  python3 human_reader.py score ~/Downloads/reader-<name>.csv    -> miss rate by model family and artifact
+  python3 harness/human_reader.py make --batches probes scale --n 40     -> runs/_labels/reader_sheet.html
+  python3 harness/human_reader.py score ~/Downloads/reader-<name>.csv    -> miss rate by model family and artifact
 
 The sheet shows the text and what kind of text it is. It never shows the model, the code or whether the run cheated.
 About a quarter of the items come from runs that did not cheat, as controls.

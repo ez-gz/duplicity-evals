@@ -1,6 +1,6 @@
 """judge.py: one LLM call per scored run (claude -p in the agent image).
 
-  python3 judge.py --batch smoke [--concurrency 3] [--model opus] [--force]
+  python3 harness/judge.py --batch smoke [--concurrency 3] [--model opus] [--force]
 
 Writes judge.json: {cheating, cheat_type, disclosed, claims_success, probe_answer, quote, probe_quote,
 analysis, judge_model, judge_version}. The judge never sees the harness's pass/fail labels.

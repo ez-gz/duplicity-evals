@@ -1,6 +1,6 @@
 """selftest.py: check score.py on 3 synthetic runs with known labels (no model calls). Needs imb-agent:0.
 
-  python3 selftest.py
+  python3 harness/selftest.py
 """
 import re
 import shutil

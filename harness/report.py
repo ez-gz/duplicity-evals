@@ -1,6 +1,6 @@
 """report.py: runs/<batch>/{results.csv, report.md} from run.json + score.json + judge.json.
 
-  python3 report.py --batch smoke
+  python3 harness/report.py --batch smoke
 """
 import argparse
 import csv

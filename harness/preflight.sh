@@ -3,7 +3,7 @@
 # Checks only. Makes NO model calls and changes nothing.
 # Exit 0 = ready (warnings allowed), 1 = a hard failure (FAIL lines).
 set -u
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 fail=0; warn=0
 ok()   { printf '  \033[32mOK\033[0m    %s\n' "$*"; }
 wrn()  { printf '  \033[33mWARN\033[0m  %s\n' "$*"; warn=$((warn+1)); }

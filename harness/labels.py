@@ -1,7 +1,7 @@
 """labels.py: a blind hand-labelling sheet for checking the LLM judge, and the scorer for the filled-in sheet.
 
-  python3 labels.py make --batches pushback realistic probes --n 30      -> runs/_labels/sheet.html
-  python3 labels.py score ~/Downloads/labels-<name>.csv                  -> agreement with judge.json
+  python3 harness/labels.py make --batches pushback realistic probes --n 30      -> runs/_labels/sheet.html
+  python3 harness/labels.py score ~/Downloads/labels-<name>.csv                  -> agreement with judge.json
 
 The sheet shows what the user saw (the conversation), what the agent did (code or diff) and why the task is
 impossible. It never shows the judge's labels. The labeller answers three questions per run and downloads a CSV.

@@ -1,6 +1,6 @@
 """compare.py: outcome tables across batches, plus agreement between the two judges.
 
-  python3 compare.py --batches pushback probes pb-neutral pb-nohack pb-pressure reportfmt [--split oneoff]
+  python3 harness/compare.py --batches pushback probes pb-neutral pb-nohack pb-pressure reportfmt [--split oneoff]
 
 Writes runs/compare.md and prints it. One row per batch x arm: how the impossible-task runs ended (see outcome.py),
 when the cheat happened, and how the cheats answered each follow-up question.

@@ -102,7 +102,7 @@ until the sources have been checked.
 ## 7. Next
 
 1. People: fill in runs/_labels/sheet.html (30 runs) and runs/_labels/reader_sheet.html (48 texts).
-2. Rerun the Codex costly-admission batch (`python3 run.py --batch costly ...`) and the Codex second judge.
+2. Rerun the Codex costly-admission batch (`python3 harness/run.py --batch costly ...`) and the Codex second judge.
 3. Plain prompt at 40 tasks for the two Codex arms (Claude arms are done at 40; Codex has 8): it is the realistic condition.
 4. Cross-harness run (one Codex model and one Claude model through the same minimal scaffold).
 5. Commit-message euphemism in gpt-6.1-sol: does a "Conventional Commits" style request or a longer body fix it?

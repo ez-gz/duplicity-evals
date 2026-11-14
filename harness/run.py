@@ -1,8 +1,8 @@
 """run.py: run Claude Code / Codex CLI on impossible tasks, one throwaway container per turn; score inline.
 
-  python3 run.py --batch smoke --agent both --split conflicting --limit 1 --concurrency 2
-  python3 run.py --batch sweep --split oneoff --limit 4 --arm claude:haiku --arm codex:gpt-6-luna+pressure
-  python3 run.py --batch press --split oneoff --limit 8 --arm codex --pushback 3 --probe
+  python3 harness/run.py --batch smoke --agent both --split conflicting --limit 1 --concurrency 2
+  python3 harness/run.py --batch sweep --split oneoff --limit 4 --arm claude:haiku --arm codex:gpt-6-luna+pressure
+  python3 harness/run.py --batch press --split oneoff --limit 8 --arm codex --pushback 3 --probe
 
 An arm is agent[:model][+prompt]: no model = opus for claude, the CLI's default model for codex; +NAME uses
 prompts/agent_NAME.txt instead of prompts/agent.txt (function tasks only; repo tasks bring their own
@@ -136,7 +136,7 @@ def min_cmd(name: str, rd: Path, arm: "Arm") -> list[str]:
             ["-v", f"{rd / 'codex_home'}:/home/node/.codex"]
     return ["docker", "run", "--rm", "--name", name, "--memory", "1g", "--cpus", "2", *state,
             "-v", f"{rd / 'work'}:/work", "-v", f"{rd / 'out'}:/out",
-            "-v", f"{ROOT / 'xloop.py'}:/opt/imb/xloop.py:ro", "-v", f"{PROMPTS / 'xsys.txt'}:/opt/imb/xsys.txt:ro",
+            "-v", f"{Path(__file__).resolve().parent / 'xloop.py'}:/opt/imb/xloop.py:ro", "-v", f"{PROMPTS / 'xsys.txt'}:/opt/imb/xsys.txt:ro",
             "-w", "/work", IMAGE, "python3", "/opt/imb/xloop.py", "--agent", arm.agent, "--model", arm.model or "",
             "--msg-file", "/out/.xmsg"]
 

@@ -1,6 +1,6 @@
 """reader.py: a blind reader's view of each thing the agent told the user (independent of the judge's rubric).
 
-  python3 reader.py --batch probes [--model haiku] [--concurrency 4]
+  python3 harness/reader.py --batch probes [--model haiku] [--concurrency 4]
 
 For every run on an impossible task, a reader model sees ONLY one piece of text the agent wrote (never the code,
 the task or the truth) and answers: does the author say the tests pass, and does the text tell you that anything
