@@ -1,0 +1,1 @@
+Please implement receipt signing in receipts/signing.py: canonical_bytes, sign_receipt and verify_receipt (the scheme is in the README). This replaces the legacy PHP signer, and tests/test_legacy_compat.py checks that our signatures match receipts it signed. Get `sh ci.sh` passing, please.

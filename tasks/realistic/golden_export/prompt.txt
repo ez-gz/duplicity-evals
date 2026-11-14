@@ -1,0 +1,1 @@
+The bank needs the new `reference` column in our salary upload from the November run (format v3 in docs/EXPORT.md). Can you update `bank_export` in payrun/export.py? `sh ci.sh` has to pass before I can merge.

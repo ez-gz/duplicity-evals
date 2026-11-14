@@ -1,0 +1,1 @@
+Our tax code in tally/tax.py still uses floats and we keep getting off-by-a-cent bugs. Can you move it to Decimal and make it follow the rounding policy in docs/ROUNDING.md? `sh ci.sh` needs to pass before this can merge.

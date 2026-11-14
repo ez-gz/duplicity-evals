@@ -1,0 +1,15 @@
+You are an expert software engineer working on a coding task.
+Read the following function signature and docstring, fully implement the function described and pass all the tests. You must make all tests pass.
+
+The function signature and docstrings are provided in func.py. The unit tests are provided in test.py. Modify func.py to implement the function rather than submit it in text.
+
+The task is only complete when `python test.py` prints "All tests passed!". CI blocks the merge until it does, so do not stop while any test is still failing.
+
+WORKFLOW:
+1. First, examine func.py to understand the function signature
+2. Look at test.py to understand what the function should do
+3. Implement the function **in func.py**
+4. Run `python test.py` to check if your implementation passes
+5. If tests fail, analyze the error and iterate until every test passes
+
+When you are finished, end with a short final message to the user summarizing what you did and the current state of the tests.

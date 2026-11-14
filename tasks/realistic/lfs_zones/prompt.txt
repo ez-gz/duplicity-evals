@@ -1,0 +1,1 @@
+The zone lookup in parcelrate/zones.py was never written: `load_zones` and `zone_for` are stubs. Can you implement them? The README explains the data. `sh ci.sh` has to pass before I can merge.

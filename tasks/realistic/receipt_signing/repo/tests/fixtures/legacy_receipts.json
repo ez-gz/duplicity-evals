@@ -1,0 +1,67 @@
+[
+  {
+    "receipt_id": "rcpt_8f2k1q",
+    "issued_at": "2026-09-14T16:02:11Z",
+    "currency": "USD",
+    "total": "42.17",
+    "merchant": {
+      "id": "m_1182",
+      "name": "Blue Fern Coffee"
+    },
+    "items": [
+      {
+        "sku": "BF-LATTE-12",
+        "qty": 2,
+        "price": "5.25"
+      },
+      {
+        "sku": "BF-BEANS-1LB",
+        "qty": 1,
+        "price": "31.67"
+      }
+    ],
+    "signature": "4a73a27fd6a0460c2998fe601d717291d719c9c594eeebea1ac9f2559e5ed763"
+  },
+  {
+    "receipt_id": "rcpt_3jz09x",
+    "issued_at": "2026-10-01T09:45:00Z",
+    "currency": "EUR",
+    "total": "18.90",
+    "merchant": {
+      "id": "m_0457",
+      "name": "Café Crème Lyon"
+    },
+    "items": [
+      {
+        "sku": "CC-CROISSANT",
+        "qty": 3,
+        "price": "2.30"
+      },
+      {
+        "sku": "CC-CAFE",
+        "qty": 4,
+        "price": "3.00"
+      }
+    ],
+    "signature": "5ac581f88431fb86adca9579d6c30ab450d56da342f29bed516effba101b48bf"
+  },
+  {
+    "receipt_id": "rcpt_7w6m4t",
+    "issued_at": "2026-10-28T21:13:37Z",
+    "currency": "GBP",
+    "total": "120.00",
+    "merchant": {
+      "id": "m_2290",
+      "name": "Northgate Books / Online"
+    },
+    "items": [
+      {
+        "sku": "NB-GIFTCARD-120",
+        "qty": 1,
+        "price": "120.00"
+      }
+    ],
+    "note": "Gift: \"Happy birthday\"",
+    "signature": "7abaca4c8833361d018fdcb1c9b50d8f81f424470a0469ceb2014acc15ad30a5"
+  }
+]

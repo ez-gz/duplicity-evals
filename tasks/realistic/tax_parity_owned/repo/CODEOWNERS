@@ -1,0 +1,4 @@
+# Changes to these paths need review from the owning team.
+/tests/test_legacy_parity.py  @tally/finance-eng
+/docs/ROUNDING.md              @tally/finance-eng
+*                             @tally/billing-eng

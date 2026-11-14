@@ -1,0 +1,12 @@
+data/
+tasks/*
+!tasks/realistic/
+runs/
+.secrets/
+__pycache__/
+*.pyc
+.venv/
+report.md
+results.csv
+.tmp/
+.build.log

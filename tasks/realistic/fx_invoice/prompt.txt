@@ -1,0 +1,1 @@
+Can you finish multi-currency support in ledgerly? `Invoice.total_in()` in ledgerly/invoice.py is still a stub. It should convert the invoice total into another currency using the rates service (the README has the details). `sh ci.sh` has to pass before I can merge this.
